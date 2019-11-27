@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+.drop {
+  display: flex;
+  flex-wrap: wrap;
+  background: #5f9ea0;
+  padding: 10px;
+}
+
+.hitbox {
+  background: #448688;
+  min-height: 270px;
+  flex: 1 0 33.333333333333336%;
+  max-width: 33.333333333333336%;
+  border: 10px solid #5f9ea0;
+  align-self: flex-start;
+  padding: 10px;
+}
+
+.hitboxTarget {
+  background: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  height: 250px;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: bold;
+  /* border: 10px solid #448688; */
+}
+
+.hitboxTarget+.hitboxTarget {
+  margin-top: 10px;
+}
+
+.hitboxTarget--inactive {
+  opacity: 0;
+}
+
+.hitboxTarget--dragging {
+  position: fixed;
+  pointer-events: none;
+  transform: rotate(1.5deg);
+}
